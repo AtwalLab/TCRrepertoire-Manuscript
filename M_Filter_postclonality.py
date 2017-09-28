@@ -2,7 +2,7 @@
 FILTERING. POST CLONALITY.
 This code takes files after clonality analysis with mixcr, finds all identical
 clones, collapses the sequences and adds to the original unique droplets
-dataframes.
+dataframes. The resulting dataframe is converted into a fasta file for the second clonality analysis.
 
 """
 
@@ -112,7 +112,28 @@ TRA_single_prod=pd.concat([TRAsingle_prod,TRAs_new_prod],axis=0)
 TRB_single_prod=pd.concat([TRBsingle_prod,TRBs_new_prod],axis=0)
 
 #Save the dataframes as .txt file.
-TRA_single_prod.to_csv('TRAs_final_productive.txt', sep='\t', index=False)
-TRB_single_prod.to_csv('TRBs_final_productive.txt', sep='\t', index=False)
-TRA_single_unprod.to_csv('TRAs_final_unproductive.txt', sep='\t', index=False)
-TRB_single_unprod.to_csv('TRBs_final_unproductive.txt', sep='\t', index=False)
+TRA_single_prod.to_csv('TRAsFinal_productive.txt', sep='\t', index=False)
+TRB_single_prod.to_csv('TRBsFinal_productive.txt', sep='\t', index=False)
+TRA_single_unprod.to_csv('TRAsFinal_unproductive.txt', sep='\t', index=False)
+TRB_single_unprod.to_csv('TRBsFinal_unproductive.txt', sep='\t', index=False)
+
+#FASTA file preparation:
+#Insert > symbol for fasta file.
+TRA_single_prod.insert(0,'fasta','>')
+TRB_single_prod.insert(0,'fasta','>')
+
+#Take only a sequence column
+TRA_prod_seq=TRA_single_prod[['readSequence']]
+TRB_prod_seq=TRB_single_prod[['readSequence']]
+
+#Put all sequence info into one string.
+TRA_prod_info=pd.DataFrame(TRA_single_prod.fasta+'_'+TRA_single_prod.droplet+'_'+TRA_single_prod.molecular+'_'+TRA_single_prod.number.astype(str), columns=['info'])
+TRB_prod_info=pd.DataFrame(TRB_single_prod.fasta+'_'+TRB_single_prod.droplet+'_'+TRB_single_prod.molecular+'_'+TRB_single_prod.number.astype(str), columns=['info'])
+
+#Concatenate info and sequence dataframes.
+TRAfasta_prod=pd.concat([TRA_prod_info,TRA_prod_seq], axis=1)
+TRBfasta_prod=pd.concat([TRB_prod_info,TRB_prod_seq], axis=1)
+
+#Create fasta files so that >info of each sequence is the 1st row and each sequence is the 2nd row.
+TRAfasta_prod.to_csv('TRAsFinal_productive.fasta', sep='\n', index=False, header=False)
+TRBfasta_prod.to_csv('TRBsFinal_productive.fasta', sep='\n', index=False, header=False)
