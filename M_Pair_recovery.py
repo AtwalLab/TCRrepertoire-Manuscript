@@ -15,8 +15,8 @@ from scipy import stats
 import pandas as pd
 
 #Import single chain files.
-TRA_prod=pd.read_csv('TRAsFinal_productive.txt', sep='\t')
-TRB_prod=pd.read_csv('TRBsFinal_productive.txt', sep='\t')
+TRA_prod=pd.read_csv('TRAs_Final_productive.txt', sep='\t')
+TRB_prod=pd.read_csv('TRBs_Final_productive.txt', sep='\t')
 
 #Find all the droplets that appear in both alpha and beta dataframes.
 #It's done by concatenating alpha and beta dataframes and taking only the droplets
