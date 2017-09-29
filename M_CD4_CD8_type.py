@@ -29,8 +29,8 @@ for i in range(1,len(file_list)):
 #Import all files for stratification.
 TR_prod=pd.read_csv('TRpairs_productive.txt', sep='\t')
 
-TRA_prod=pd.read_csv('TRAsFinal_productive.txt', sep='\t')
-TRB_prod=pd.read_csv('TRBsFinal_productive.txt', sep='\t')
+TRA_prod=pd.read_csv('TRAs_Final_productive.txt', sep='\t')
+TRB_prod=pd.read_csv('TRBs_Final_productive.txt', sep='\t')
 
 #Rename the columns to more convenient names.
 CD=CD[['DB','CD4','CD8']]
