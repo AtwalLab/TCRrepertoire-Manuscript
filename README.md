@@ -60,6 +60,21 @@ Finds sequences that got dropped by mixcr in clonality analysis and removes them
 Adds the corresponding clone IDs as a first column to the main unique sequence datafrane.
 
 ### GET ALPHA BETA PAIRS.
-M_Pair_recovery.py - 
+M_Pair_recovery.py - takes single chain files and finds matching droplet barcodes for alpha and beta chains.
+
+Generates a dataframe of paired alpha beta chains put in one row. The column names end with A or B for alpha and beta chains in the resulting dataframe.
+
+Some droplets will not have a pair and will be dropped from the paired chain dataframe.
+
+### STRATIFY BY CD4/CD8
+M_CD4_CD8_type.py - takes all tab files containing CD4/CD8 information for each droplet barcode, and takes both paired and single chain dataframes.
+
+CD4 and CD8 type will be assigned by a number, and the type will be considered true if that number is >0 for only one type.
+
+Some barcodes have no type assigned with number 0 for both, and some have both types assigned to them - these were dropped.
+
+The output are separate CD4 and CD8 dataframes for each input dataframe.
+
+
 
 
