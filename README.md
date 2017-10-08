@@ -75,6 +75,9 @@ Some barcodes have no type assigned with number 0 for both, and some have both t
 
 The output are separate CD4 and CD8 dataframes for each input dataframe.
 
+## Data Analysis
 
+### Figure 2A and B. Supplementary Figure 1 and 2.
+M_Powerlaws_pairedvsingle_fits.py - 
 
 
