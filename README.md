@@ -1,6 +1,6 @@
 # TCR repertoire - Manuscript
 Scripts used to filter and quality control raw JUNO sequencing data of single T cell receptor alpha and beta chains.
-Scripts for generating every data figure in the manuscript post
+Scripts for generating every data figure in the manuscript.
 
 ## Filtering and quality control
 
@@ -79,5 +79,35 @@ The output are separate CD4 and CD8 dataframes for each input dataframe.
 
 ### Figure 2A and B. Supplementary Figure 1 and 2.
 M_Powerlaws_pairedvsingle_fits.py - 
+
+### Figure 2C. Supplementary Figure 3.
+M_unique_chain_count.py - 
+
+### Figure 3. Supplementary Figure 4 and 5.
+M_heatmaps.py - 
+
+### Table 1.
+M_mutual_information.py - 
+
+### Supplementary Figure 6.
+M_bargraphs.py - 
+
+### Figure 4A, B and C. Supplementary Figure 8 and 9.
+M_Powerlaws_alldata_fits.py - 
+
+### Supplementary Figure 7.
+M_powerlaw_singlechain.py - 
+
+### Figure 4D.
+M_Clonality.py - 
+
+### Figure 5A, B and C.
+M_shared_sequences.py - 
+
+### Figure 5D and E.
+M_Shared_sequences_simulation.py - 
+
+
+
 
 
