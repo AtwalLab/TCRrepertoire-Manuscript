@@ -78,19 +78,53 @@ The output are separate CD4 and CD8 dataframes for each input dataframe.
 ## Data Analysis
 
 ### Figure 2A and B. Supplementary Figure 1 and 2.
-M_Powerlaws_pairedvsingle_fits.py - 
+M_Powerlaws_pairedvsingle_fits.py - inputs paired alpha/beta dataframes.
+
+The dataframes are split by alpha and beta chain and clone size distributions of paired, single alpha and single beta datasets are compared by fitting power law exponents.
+
+Exponent values are acquired by solving a maximum likelihood equation using Newton-Raphson method.
+
+Figure 2A - power law distributions with a linear fit given the exponent when Xmin=1 for all subject pooled together.
+Figure 2B - mean exponent values across all 5 subjects for Xmin=[1,2,3,4,5].
+Supplementary Figure 1 - clone size distributions with a linear fit given the exponent when Xmin=1 for each individual subject.
+Supplemetary Figure 2 - exponent values for Xmin=[1,2,3,4,5] of each individual subject.
 
 ### Figure 2C. Supplementary Figure 3.
-M_unique_chain_count.py - 
+M_unique_chain_count.py - inputs paired alpha/beta dataframes.
+
+Calculates the number of unique alpha sequences each beta sequence pairs with and other way around.
+
+Figure 2C - plot of unique pairing counts for each alpha and beta chain against the frequencies of those counts for all subjects pooled.
+Supplementary Figure 3 - unique pairing counts for each alpha and beta chain against the frequencies of those counts of each individual subject.
 
 ### Figure 3. Supplementary Figure 4 and 5.
-M_heatmaps.py - 
+M_heatmaps.py - inputs paired alpha/beta dataframes.
+
+Calculates gene usage and CDR3 length usage across the alpha and beta chains and outputs results in a form of heatmaps.
+
+Frequency = p(state1,state2)/(sample size)
+
+Figure 3 - heatmaps of each gene pair (aVbV, aVbJ, aJbV, aJbJ, aVbD, aJbD) and CDR3 length usage for all subjects pooled.
+Supplementary Figure 4 - heatmaps of each gene pair usage of each individual subject.
+Supplementary Figure 5 - heatmaps of CDR3 length usage of each individual subject.
 
 ### Table 1.
-M_mutual_information.py - 
+M_mutual_information.py - inputs paired alpha/beta and single alpha and beta dataframes.
+
+Performs mutual information calculations and applies correction: MI(estimated)=MI(true)+a/n+b/n^2+...
+
+Corrections is performed by subsamplling from the dataframes and estimating mutual information for each sample fraction.
+
+Table 1 - MI(true) values for each gene pair within and across the chains as well as CDR3 lengths across the alpha and beta chains.
+
+Additional plots (not present in the manuscript) - plots if 1/(sample size) against the MI estimate. The curve is then fitted to some order polynomial and plotted along with the scatter plot. The order of polynomial can be adjusted given what the plots looks like.
 
 ### Supplementary Figure 6.
-M_bargraphs.py - 
+M_bargraphs.py - inputs single alpha and beta chain dataframes split by CD4 and CD8 type.
+
+Calculates frequences of gene usage (V and J) for each dataframe.
+
+Supplementary Figure 6 - bargraph plots for each gene for each dataframe comparing gene usage across all 5 subjects.
 
 ### Figure 4A, B and C. Supplementary Figure 8 and 9.
 M_Powerlaws_alldata_fits.py - 
