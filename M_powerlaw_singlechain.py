@@ -72,3 +72,95 @@ CSB_cd8_prod_2, CSB_cd8_freq_prod_2=powerlaw_single_toplot(TRB_cd8_2)
 CSB_cd8_prod_3, CSB_cd8_freq_prod_3=powerlaw_single_toplot(TRB_cd8_3)
 CSB_cd8_prod_4, CSB_cd8_freq_prod_4=powerlaw_single_toplot(TRB_cd8_4)
 CSB_cd8_prod_5, CSB_cd8_freq_prod_5=powerlaw_single_toplot(TRB_cd8_5)
+
+#SUPPLEMENTARY FIGURE 7A
+#CD4 alpha
+#Subject 1
+plt.plot(CSA_cd4_prod_1, CSA_cd4_freq_prod_1, 'o', color='red', markeredgecolor='none', markersize=5.0,alpha=1,label='S1')
+#Subject 2
+plt.plot(CSA_cd4_prod_2, CSA_cd4_freq_prod_2, 'o', color='orange', markeredgecolor='none', markersize=5.0,alpha=1,label='S2')
+#Subject 3
+plt.plot(CSA_cd4_prod_3, CSA_cd4_freq_prod_3, 'o', color='black', markeredgecolor='none', markersize=5.0,alpha=1,label='S3')
+#Subject 4
+plt.plot(CSA_cd4_prod_4, CSA_cd4_freq_prod_4, 'o', color='green', markeredgecolor='none', markersize=5.0,alpha=1,label='S4')
+#Subject 5
+plt.plot(CSA_cd4_prod_5, CSA_cd4_freq_prod_5, 'o', color='blue', markeredgecolor='none', markersize=5.0,alpha=1,label='S5')
+
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel('clone size',fontsize=15)
+plt.ylabel('frequency',fontsize=15)
+plt.xlim([10**0-0.2,10**4])
+plt.ylim([10**-5,10**0+1])
+plt.legend(fontsize=12)
+plt.tight_layout()
+plt.savefig('alpha_CD4_powerlaws_paper.png')
+
+#SUPPLEMENTARY FIGURE 7B
+#CD4 beta
+#Subject 1
+plt.plot(CSB_cd4_prod_1, CSB_cd4_freq_prod_1, 'o', color='red', markeredgecolor='none', markersize=5.0,alpha=1,label='S1')
+#Subject 2
+plt.plot(CSB_cd4_prod_2, CSB_cd4_freq_prod_2, 'o', color='orange', markeredgecolor='none', markersize=5.0,alpha=1,label='S2')
+#Subject 3
+plt.plot(CSB_cd4_prod_3, CSB_cd4_freq_prod_3, 'o', color='black', markeredgecolor='none', markersize=5.0,alpha=1,label='S3')
+#Subject 4
+plt.plot(CSB_cd4_prod_4, CSB_cd4_freq_prod_4, 'o', color='green', markeredgecolor='none', markersize=5.0,alpha=1,label='S4')
+#Subject 5
+plt.plot(CSB_cd4_prod_5, CSB_cd4_freq_prod_5, 'o', color='blue', markeredgecolor='none', markersize=5.0,alpha=1,label='S5')
+
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel('clone size',fontsize=15)
+plt.ylabel('frequency',fontsize=15)
+plt.xlim([10**0-0.2,10**4])
+plt.ylim([10**-5,10**0+1])
+plt.legend(fontsize=12)
+plt.tight_layout()
+plt.savefig('beta_CD4_powerlaws_paper.png')
+
+#SUPPLEMENTARY FIGURE 7C
+#CD8 alpha
+#Subject 1
+plt.plot(CSA_cd8_prod_1, CSA_cd8_freq_prod_1, 'o', color='red', markeredgecolor='none', markersize=5.0,alpha=1,label='S1')
+#Subject 2
+plt.plot(CSA_cd8_prod_2, CSA_cd8_freq_prod_2, 'o', color='orange', markeredgecolor='none', markersize=5.0,alpha=1,label='S2')
+#Subject 3
+plt.plot(CSA_cd8_prod_3, CSA_cd8_freq_prod_3, 'o', color='black', markeredgecolor='none', markersize=5.0,alpha=1,label='S3')
+#Subject 4
+plt.plot(CSA_cd8_prod_4, CSA_cd8_freq_prod_4, 'o', color='green', markeredgecolor='none', markersize=5.0,alpha=1,label='S4')
+#Subject 5
+plt.plot(CSA_cd8_prod_5, CSA_cd8_freq_prod_5, 'o', color='blue', markeredgecolor='none', markersize=5.0,alpha=1,label='S5')
+
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel('clone size',fontsize=15)
+plt.ylabel('frequency',fontsize=15)
+plt.xlim([10**0-0.2,10**4])
+plt.ylim([10**-5,10**0+1])
+plt.legend(fontsize=12)
+plt.tight_layout()
+plt.savefig('alpha_CD8_powerlaws_paper.png')
+
+#SUPPLEMENTARY FIGURE 7D
+#CD8 beta
+#Subject 1
+plt.plot(CSB_cd8_prod_1, CSB_cd8_freq_prod_1, 'o', color='red', markeredgecolor='none', markersize=5.0,alpha=1,label='S1')
+#Subject 2
+plt.plot(CSB_cd8_prod_2, CSB_cd8_freq_prod_2, 'o', color='orange', markeredgecolor='none', markersize=5.0,alpha=1,label='S2')
+#Subject 3
+plt.plot(CSB_cd8_prod_3, CSB_cd8_freq_prod_3, 'o', color='black', markeredgecolor='none', markersize=5.0,alpha=1,label='S3')
+#Subject 4
+plt.plot(CSB_cd8_prod_4, CSB_cd8_freq_prod_4, 'o', color='green', markeredgecolor='none', markersize=5.0,alpha=1,label='S4')
+#Subject 5
+plt.plot(CSB_cd8_prod_5, CSB_cd8_freq_prod_5, 'o', color='blue', markeredgecolor='none', markersize=5.0,alpha=1,label='S5')
+
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel('clone size',fontsize=15)
+plt.ylabel('frequency',fontsize=15)
+plt.xlim([10**0-0.2,10**4])
+plt.ylim([10**-5,10**0+1])
+plt.legend(fontsize=12)
+plt.tight_layout()
+plt.savefig('beta_CD8_powerlaws_paper.png')
