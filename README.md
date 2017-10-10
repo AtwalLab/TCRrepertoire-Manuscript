@@ -6,7 +6,7 @@ For quality control and filtering see Filtering scripts.
 ## Data Analysis
 
 ### Figure 2A and B. Supplementary Figure 1 and 2.
-M_Powerlaws_pairedvsingle_fits.py - inputs paired alpha/beta dataframes.
+M_Powerlaws_pairedvsingle_fits - inputs paired alpha/beta dataframes.
 
 The dataframes are split by alpha and beta chain and clone size distributions of paired, single alpha and single beta datasets are compared by fitting power law exponents.
 
@@ -21,7 +21,7 @@ Supplementary Figure 1 - clone size distributions with a linear fit given the ex
 Supplemetary Figure 2 - exponent values for Xmin=[1,2,3,4,5] of each individual subject for paired and single alpha and beta repertoires.
 
 ### Figure 2C. Supplementary Figure 3.
-M_unique_chain_count.py - inputs paired alpha/beta dataframes.
+M_unique_chain_count - inputs paired alpha/beta dataframes.
 
 Calculates the number of unique alpha sequences each beta sequence pairs with and other way around.
 
@@ -30,7 +30,7 @@ Figure 2C - plot of unique pairing counts for each alpha and beta chain against 
 Supplementary Figure 3 - unique pairing counts for each alpha and beta chain against the frequencies of those counts of each individual subject.
 
 ### Figure 3. Supplementary Figure 4 and 5.
-M_heatmaps.py - inputs paired alpha/beta dataframes.
+M_heatmaps - inputs paired alpha/beta dataframes.
 
 Calculates gene usage and CDR3 length usage across the alpha and beta chains and outputs results in a form of heatmaps.
 
@@ -43,7 +43,7 @@ Supplementary Figure 4 - heatmaps of each gene pair usage of each individual sub
 Supplementary Figure 5 - heatmaps of CDR3 length usage of each individual subject.
 
 ### Table 1.
-M_mutual_information.py - inputs paired alpha/beta and single alpha and beta dataframes.
+M_mutual_information - inputs paired alpha/beta and single alpha and beta dataframes.
 
 Performs mutual information calculations and applies correction: MI(estimated)=MI(true)+a/n+b/n^2+...
 
@@ -54,14 +54,14 @@ Table 1 - MI(true) values for each gene pair within and across the chains as wel
 Additional plots (not present in the manuscript) - plots if 1/(sample size) against the MI estimate. The curve is then fitted to some order polynomial and plotted along with the scatter plot. The order of polynomial can be adjusted given what the plots looks like.
 
 ### Supplementary Figure 6.
-M_bargraphs.py - inputs single alpha and beta chain dataframes split by CD4 and CD8 type.
+M_bargraphs - inputs single alpha and beta chain dataframes split by CD4 and CD8 type.
 
 Calculates frequences of gene usage (V and J) for each dataframe.
 
 Supplementary Figure 6 - bargraph plots for each gene for each dataframe comparing gene usage across all 5 subjects.
 
 ### Figure 4A, B and C. Supplementary Figure 8 and 9.
-M_Powerlaws_alldata_fits.py - inputs paired alpha/beta dataframes divided by CD4 and CD8.
+M_Powerlaws_alldata_fits - inputs paired alpha/beta dataframes divided by CD4 and CD8.
 
 The clone size distributions of CD4 and CD8 repertoires are compared by fitting power law exponents. Exponent values are acquired by solving a maximum likelihood equation using Newton-Raphson method.
 
@@ -74,12 +74,12 @@ Supplementary Figure 8 - power law distribution of CD4 and CD8 repertoires for e
 Supplementary Figure 9 - exponent values for Xmin=[1,2,3,4,5] for each individual subject for CD4 and CD8 repertoires.
 
 ### Supplementary Figure 7.
-M_powerlaw_singlechain.py - inputs single alpha and beta chain dataframes divided by CD4 and CD8.
+M_powerlaw_singlechain - inputs single alpha and beta chain dataframes divided by CD4 and CD8.
 
 Supplementary Figure 7 - plots of clone size distributions of CD4 and CD8 single chain alpha and beta repertoires of each subject.
 
 ### Figure 4D.
-M_Clonality.py - inputs paired alpha/beta dataframes divided by CD4 and CD8.
+M_Clonality - inputs paired alpha/beta dataframes divided by CD4 and CD8.
 
 The dataframes are split by alpha and beta chain and clonality scores of paired, single alpha and single beta datasets are compared.
 
@@ -88,12 +88,12 @@ Clonality score is calculated by subtracting Shannon's Entropy from 1.
 Figure 4D - clonality scores comparing paired, and single alpha and beta datasets for CD4 and CD8 for each individual subject.
 
 ### Figure 5A, B and C.
-M_shared_sequences.py - inputs paired alpha/beta and single alpha and beta dataframes.
+M_shared_sequences - inputs paired alpha/beta and single alpha and beta dataframes.
 
 Figure 5A, B and C - number of shaired paired, and single alpha and beta CDR3 sequences among any 2, 3, 4, and all 5 individuals.
 
 ### Figure 5D and E.
-M_Shared_sequences_simulation.py - simulation during which an artificial dataset with a clone size distribution following a power law is generated.
+M_Shared_sequences_simulation - simulation during which an artificial dataset with a clone size distribution following a power law is generated.
 
 The generated dataset is then subsampled twice given the specific fractions. The idea is to see how many shared sequences we can observe when sampling from the same distribution twice.
 
