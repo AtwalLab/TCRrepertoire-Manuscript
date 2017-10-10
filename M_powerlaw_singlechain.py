@@ -1,5 +1,7 @@
 """
-
+This script inputs single alpha and beta chain dataframes divided by CD4 and CD8.
+Plots clone size distributions of CD4 and CD8 single chain alpha and beta repertoires
+of each subject.
 """
 
 from __future__ import division
