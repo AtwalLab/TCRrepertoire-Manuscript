@@ -4,12 +4,12 @@ Jupyter notebooks for generating every data figure in the manuscript using Juno 
 For quality control and filtering see Filtering scripts.
 
 Prerequisites to run all codes:
-Python 2.7
-numpy 1.11.3
-matplotlib 2.0.0
-pandas 0.10.1
-scipy 0.18.1
-seaborn 0.7.1
+Python 2.7,
+numpy 1.11.3,
+matplotlib 2.0.0,
+pandas 0.10.1,
+scipy 0.18.1,
+seaborn 0.7.1.
 
 
 ## Data Analysis
