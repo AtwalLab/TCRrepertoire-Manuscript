@@ -2,6 +2,8 @@
 Scripts used to filter and quality control raw JUNO sequencing data of single T cell receptor alpha and beta chains.
 Scripts for generating every data figure in the manuscript.
 
+Prerequisites to run all codes: Python 2.7, numpy 1.11.3, matplotlib 2.0.0, pandas 0.10.1, scipy 0.18.1, seaborn 0.7.1, biopython 1.68.
+
 ## Filtering and quality control
 
 ### FILTERING STEP 1. 
