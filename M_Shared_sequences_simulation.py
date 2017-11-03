@@ -114,7 +114,7 @@ for k in range(0,len(F)):
 #calculate standard error of the mean
 SEM=np.divide(std,bootstrap**0.5)
 
-#FIGURE 5B
+#FIGURE 5E
 f, ax = plt.subplots()
 ax.scatter(F,R,color='red', edgecolor='black', marker='o', s=50, alpha=1)
 ax.errorbar(F, R, yerr=SEM, ls='none', color='black', elinewidth=1, capsize=2)
