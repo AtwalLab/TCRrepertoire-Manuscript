@@ -80,7 +80,7 @@ fraction_p=np.divide(shared_paired,len(CDR3_p.CDR3.value_counts()))
 fraction_a=np.divide(alpha_shared,len(CDR3_a.CDR3.value_counts()))
 fraction_b=np.divide(beta_shared,len(CDR3_b.CDR3.value_counts()))
 
-#FIGURE 5C
+#FIGURE 5A
 f, ax1 = plt.subplots(1, figsize=(10,4))
 pos = list(range(4))
 width = 0.25
@@ -235,7 +235,7 @@ for i in range(len(df)):
     clone_sizes=np.append(clone_sizes,len(TRp_prod_4[TRp_prod_4['CDR3_AB']==df.index[i]]))
     clone_sizes=np.append(clone_sizes,len(TRp_prod_5[TRp_prod_5['CDR3_AB']==df.index[i]]))
 
-#FIGURE 5E
+#FIGURE 5C
 #Determine clone size distribution.
 CS, counts = np.unique(clone_sizes,return_counts=True)
 
@@ -272,7 +272,7 @@ plt.savefig('shared_CDR3s_persubject.svg',format='svg')
 #convert all values to numeric.
 df_freq_dir=df_freq_dir.convert_objects(convert_numeric=True)
 
-#FIGURE 5D
+#FIGURE 5B
 plt.figure()
 #set font size.
 sns.set(font_scale=1.4)
