@@ -1,6 +1,8 @@
 # TCRrepertoire-Manuscript
 Jupyter notebooks for generating every data figure in the manuscript using Juno sequencing data of single T cell receptor alpha and beta chains. 
 
+https://www.biorxiv.org/content/early/2017/11/02/213462
+
 For quality control and filtering see Filtering scripts.
 
 Prerequisites to run all codes:
